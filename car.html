@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>checkboxes form</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+ 
+<body>
+
+<h2>Manoj Kota orders a car</h2>
+
+<form>
+    <input type="checkbox" id="electric" name="topping1"   
+      value="true" >
+    <label for="cb1_cheese">electric</label></br>
+  
+    <input type="checkbox" id="ac" name="topping2" 
+       value="ac">
+    <label for="ac">ac</label></br>
+  
+    <input type="checkbox" id="gps" name="topping3"   
+       value="gps" >
+    <label for="gps">gps</label></br>
+
+    <input type="button" onclick="orderCar()" value="Order a car">
+  </form>
+  <p id="resultcar"></p>
+  <script>
+      my_car={};
+      function orderCar()
+      {
+        my_car={};
+        el=document.getElementById("electric").checked;
+    ac=document.getElementById("ac").checked; 
+    gps=document.getElementById("gps").checked; 
+    o=document.getElementById("resultcar"); 
+
+    if(el&&ac&&gps)
+    {
+        my_car=true; 
+    }
+    else{
+        my_car=false; 
+
+    }
+    o.innerHTML =my_car;
+
+    
+
+
+
+      }
+  </script>
+</body>
+</html> 
