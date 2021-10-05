@@ -17,27 +17,30 @@
     <input type="button" onclick="power()" value="Compute ">
 </form>
 <p id="result1"></p>
-<script > 
-function power(){
-    b=document.getElementById("form1_base").value;
-    e=document.getElementById("form1_exponent").value;
-   output=document.getElementById("result1")
-    result="";
-    var c=b;
-    for(i=1;i<=e;i++){
-        c=c**i;
-        result=result+" "+c;
- }
- output.innerHTML = result;
-
- 
- 
- 
-
-}
- 
-
-
+<form>
+    <div>
+        <input type="radio" onclick="plus1()"  value="plus">
+               
+    <label for="plus">+</label>
+      </div>
+      <div>
+        <input type="radio" onclick="minus()"  value="minus">
+               
+        <label for="minus">-</label>
+      </div>
+      
+      <div>
+        <input type="radio" onclick="times()" value="times">
+        <label for="times">*</label>
+      </div>
+      
+      <div>
+        <input type="radio" onclick="divide()"value="divide">
+        <label for="divide">/</label>
+      </div>
+</form>
+<p id="result2"></p>
+<script src="main.js" > 
 </script>
 
 </body>
