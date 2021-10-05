@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>javascript arithmethic calculations</title>
+   </head>
+<body>
+
+<h2>Manoj Kota computes</h2>
+
+<form>
+    <label for="form1_age">Enter a base</label>
+    <input type ="number"  id="form1_base" name="form1_age" > <br>
+
+    <label for="form1_nick">Enter a Exponent</label>
+    <input type ="number" id="form1_exponent" name="form1_exponent" autofocus> <br>
+
+    <input type="button" onclick="power()" value="Compute ">
+</form>
+<p id="result1"></p>
+<script > 
+function power(){
+    b=document.getElementById("form1_base").value;
+    e=document.getElementById("form1_exponent").value;
+   output=document.getElementById("result1")
+    result="";
+    var c=b;
+    for(i=1;i<=e;i++){
+        c=c**i;
+        result=result+" "+c;
+ }
+ output.innerHTML = result;
+
+ 
+ 
+ 
+
+}
+ 
+
+
+</script>
+
+</body>
+</html> 
