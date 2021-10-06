@@ -35,7 +35,7 @@
 
     <input type="button" onclick="updateCar()" value="Update the car">
 </form>
-<p id="updatecar"></p>
+
 
   <script>
       my_car={};
@@ -48,14 +48,20 @@
     o=document.getElementById("resultcar"); 
 
     my_car="iselectric:"+el+"\nhave ac:"+ac+"\nhave gps:"+gps;
+    s=my_car;
     o.innerHTML =my_car;
 }
 function updateCar(){
     prop=document.getElementById("form1_prop").value;
     val=document.getElementById("form1_value").value;
-    upval=document.getElementById("updatecar");
-    my_car=val;
-    upval.innerHTML=my_car;
+    //upval=document.getElementById("updatecar");
+    o=document.getElementById("resultcar"); 
+
+    let m=" property: "+prop+" value: "+val;
+    my_car=s+m;
+    o.innerHTML =my_car;
+
+    
 }
   </script>
 </body>
