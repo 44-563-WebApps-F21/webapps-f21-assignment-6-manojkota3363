@@ -26,6 +26,17 @@
     <input type="button" onclick="orderCar()" value="Order a car">
   </form>
   <p id="resultcar"></p>
+  <form>
+    <label for="form1_age">Enter a property</label>
+    <input type ="text" id="form1_prop" name="property" value=color> <br>
+
+    <label for="form1_value">Enter a value</label>
+    <input type ="text" id="form1_value" name="form1_nick" autofocus> <br>
+
+    <input type="button" onclick="updateCar()" value="Update the car">
+</form>
+<p id="updatecar"></p>
+
   <script>
       my_car={};
       function orderCar()
@@ -36,21 +47,16 @@
     gps=document.getElementById("gps").checked; 
     o=document.getElementById("resultcar"); 
 
-    if(el&&ac&&gps)
-    {
-        my_car=true; 
-    }
-    else{
-        my_car=false; 
-
-    }
+    my_car="iselectric:"+el+"\nhave ac:"+ac+"\nhave gps:"+gps;
     o.innerHTML =my_car;
-
-    
-
-
-
-      }
+}
+function updateCar(){
+    prop=document.getElementById("form1_prop").value;
+    val=document.getElementById("form1_value").value;
+    upval=document.getElementById("updatecar");
+    my_car=val;
+    upval.innerHTML=my_car;
+}
   </script>
 </body>
 </html> 
