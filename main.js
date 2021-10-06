@@ -14,6 +14,10 @@ var correct = 0;
         wrong+=1;
         alert("Access denied");
          res.innerHTML ="WRONG - "+ wrong;
+         if(wrong==3)
+         {
+             alert("account locked");
+         }
     }
  } 
  var i=1;
