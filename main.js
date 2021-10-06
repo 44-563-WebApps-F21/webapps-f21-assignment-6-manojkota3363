@@ -46,14 +46,14 @@ var correct = 0;
         c=c**i;
         result=result+" "+c;
  }
- output.innerHTML = "powers are"+result;
+ output.innerHTML = "powers of "+b+" are:"+result;
 }
 function plus1(){
     b=document.getElementById("form1_base").value;
     e=document.getElementById("form1_exponent").value;
     output1=document.getElementById("result2");
    var  r=b+e;
-    output1.innerHTML =r;
+    output1.innerHTML ="Addition:"+r;
 
 
 }
@@ -62,7 +62,7 @@ function minus(){
     e=document.getElementById("form1_exponent").value;
     output1=document.getElementById("result2");
    let  r=b-e;
-    output1.innerHTML =r;
+    output1.innerHTML ="minus:"+r;
 
 
 }
@@ -71,7 +71,7 @@ function times(){
     e=document.getElementById("form1_exponent").value;
     output1=document.getElementById("result2");
    let  r=b*e;
-    output1.innerHTML =r;
+    output1.innerHTML ="Mutiplication:"+r;
 
 
 }
@@ -80,7 +80,7 @@ function divide(){
     e=document.getElementById("form1_exponent").value;
     output1=document.getElementById("result2");
    let  r=b/e;
-    output1.innerHTML =r;
+    output1.innerHTML ="division:"+r;
 
 
 }
